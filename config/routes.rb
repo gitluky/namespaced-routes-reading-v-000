@@ -7,7 +7,9 @@ Rails.application.routes.draw do
 
   get '/admin/stats', to: 'stats#index'
 
-  get '/admin/stats', to: 'stats#index'
+  scope '/admin'do
+    get '/admin/stats', to: 'stats#index'
+  end
 
   root 'posts#index'
 end
